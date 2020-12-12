@@ -50,13 +50,22 @@ public class Message {
         this.dateCreated = dateCreated;
     }
 
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
     @Override
     public String toString() {
         return "Message{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", body='" + text + '\'' +
+                ", text='" + text + '\'' +
                 ", dateCreated=" + dateCreated +
+                ", author=" + author +
                 '}';
     }
 }

@@ -15,3 +15,8 @@ in application.properties
 spring.h2.console.enabled=true
 spring.h2.console.path=/console
 ```
+
+### Data Loader
+added DataLoader.java to programmatically load data,
+instead of using sql files.
+
