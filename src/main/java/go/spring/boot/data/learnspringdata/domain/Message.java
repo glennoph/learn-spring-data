@@ -1,9 +1,6 @@
 package go.spring.boot.data.learnspringdata.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -14,7 +11,8 @@ public class Message {
     private Long id; // primary key
 
     private String title;
-    private String body;
+
+    private String text;
     private Date dateCreated;
 
     // author - many posts tied to one author
@@ -36,12 +34,12 @@ public class Message {
         this.title = title;
     }
 
-    public String getBody() {
-        return body;
+    public String getText() {
+        return text;
     }
 
-    public void setBody(String body) {
-        this.body = body;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public Date getDateCreated() {
@@ -57,7 +55,7 @@ public class Message {
         return "Message{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", body='" + body + '\'' +
+                ", body='" + text + '\'' +
                 ", dateCreated=" + dateCreated +
                 '}';
     }
