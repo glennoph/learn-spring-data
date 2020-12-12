@@ -1,0 +1,1 @@
+create table message (id int not null, title varchar, body varchar, dateCreated date);

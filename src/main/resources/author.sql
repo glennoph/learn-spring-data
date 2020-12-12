@@ -1,0 +1,1 @@
+create table author (id int not null, fname varchar(20), lname varchar(20));
