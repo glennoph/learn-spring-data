@@ -1,5 +1,8 @@
 package go.spring.boot.data.learnspringdata.domain;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.data.annotation.CreatedDate;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -13,6 +16,9 @@ public class Message {
     private String title;
 
     private String text;
+
+    @CreationTimestamp
+    @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date dateCreated;
 
     // author - many posts tied to one author
@@ -42,13 +48,14 @@ public class Message {
         this.text = text;
     }
 
+
     public Date getDateCreated() {
         return dateCreated;
     }
 
-    public void setDateCreated(Date dateCreated) {
-        this.dateCreated = dateCreated;
-    }
+//    public void setDateCreated(Date dateCreated) {
+//        this.dateCreated = dateCreated;
+//    }
 
     public Author getAuthor() {
         return author;

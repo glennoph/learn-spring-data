@@ -31,7 +31,7 @@ public class DataLoader {
         // create a message
         Message m1 = new Message("Spring data is fun?");
         m1.setText("post text here");
-        m1.setDateCreated(new Date());
+        //m1.setDateCreated(new Date());
         m1.setAuthor(authgo);
         messageRepository.save(m1);
 
